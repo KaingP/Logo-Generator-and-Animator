@@ -317,7 +317,7 @@ export default function LogoDesigner({ onLogoCreated }: LogoDesignerProps) {
             </button>
             
             {showExportMenu && (
-              <div className="absolute top-full mt-2 w-full bg-[#0a0a0a] border border-white/10 rounded-xl shadow-2xl p-1 z-50 overflow-hidden flex flex-col">
+              <div className="absolute bottom-full mb-2 w-full bg-[#0a0a0a] border border-white/10 rounded-xl shadow-2xl p-1 z-50 overflow-hidden flex flex-col">
                 <button
                   onClick={() => downloadLogo("png")}
                   className="w-full text-left px-3 py-2.5 text-xs font-semibold hover:bg-white/5 rounded-lg text-white/80 hover:text-white transition-colors flex items-center justify-between"
