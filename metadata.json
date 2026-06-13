@@ -1,0 +1,6 @@
+{
+  "name": "Logo Generator and Animator",
+  "description": "Generate high-resolution vector brand logos with custom options, then breathe life into them with spectacular Veo AI 3D video animations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
