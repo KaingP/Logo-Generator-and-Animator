@@ -171,11 +171,12 @@ export default function LogoAnimator({ importedLogo }: LogoAnimatorProps) {
       const operationName = data.operationName;
       
       if (data.isFallback) {
+        const fullLogoImage = (imageSource === "imported" ? importedLogo?.imageUrl : uploadedBase64) || "";
         setAnimatingState(prev => ({
           ...prev,
           operationName: operationName,
           isFallback: true,
-          logoImage: base64Image,
+          logoImage: fullLogoImage,
           progressMsg: "Initiating interactive branding render engines..."
         }));
 
@@ -189,7 +190,7 @@ export default function LogoAnimator({ importedLogo }: LogoAnimatorProps) {
               ...prev,
               status: "completed",
               isFallback: true,
-              logoImage: base64Image,
+              logoImage: fullLogoImage,
               videoUrl: "interactive-cinematic-render",
               prompt: motionPrompt
             }));

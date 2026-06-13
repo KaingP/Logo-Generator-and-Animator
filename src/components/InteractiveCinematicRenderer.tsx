@@ -71,7 +71,9 @@ export default function InteractiveCinematicRenderer({
   // Double-check if the image is an SVG string or standard image source
   const finalImageSrc = logoImage.startsWith("data:") 
     ? logoImage 
-    : `data:image/svg+xml;base64,${logoImage}`;
+    : logoImage.startsWith("iVBORw0KG")
+      ? `data:image/png;base64,${logoImage}`
+      : `data:image/svg+xml;base64,${logoImage}`;
 
   // Track rendering timer to match standard video duration simulation (e.g. infinite loop with elapsed clock)
   useEffect(() => {
